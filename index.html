@@ -5,13 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- custom style -->
     <link rel="stylesheet" href="./css/main.min.css">
 
+    <!-- title -->
     <title>Recipe App - VanillaJS Project</title>
 </head>
-<body>
-    <h1>Recipe App.</h1>
+<body class="bg-orange-100">
+    <section class="search bg-white py-10">
+        <div class="container mx-auto h-full w-full">
+            <div class="flex justify-center items-center w-full h-full">
+                <form action="" method="post" id="recipe-form" class="flex items-center">
+                    <input type="text" id="search-recipe" name="recipe-name" class="bg-white px-4 py-1 text-lg rounded-l-md border border-gray-300 focus:border-gray-400 outline-none w-full" placeholder="Write here." required>
+                    <button type="submit" class="bg-orange-700 border border-orange-700 text-white px-4 py-1 rounded-r-md text-lg cursor-pointer hover:bg-orange-800 transition">Ok!</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
+    <!-- recipe section -->
+    <section class="text-gray-600 body-font my-10 pb-5">
+
+        <!-- container -->
+        <!-- not found -->
+        <div class="container w-11/12 md:w-6/12 mx-auto text-center" id="not-found"></div>
+        <div class="container max-w-[1600px] w-11/12 px-5 mx-auto">
+            <!-- title -->
+            <h4 class=" mb-5 text-gray-900 text-2xl font-semibold capitalize" id="result-title"></h4>
+            
+            <!-- recipe-wrapper -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" id="recipe-wrapper">
+                
+                <!-- card -->
+                <!-- <div class="block w-full shadow-md rounded-md bg-white pb-5 border-0 hover:scale-105">
+                <div class="h-full flex flex-col items-center text-center">
+                    <img
+                    alt="team-member"
+                    class="flex-shrink-0 rounded-t-md w-full h-56 object-cover mb-4"
+                    src="https://blog.vantagecircle.com/content/images/2020/08/Importance-of-team-building.png"
+                    />
+    
+                    <div class="w-full px-2">
+                    <h2 class="title-font font-medium text-lg text-gray-900">
+                        Khalil Nazari
+                    </h2>
+                    <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                    <p class="mb-4">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Inventore, blanditiis.
+                    </p>
+                    <span class="inline-flex">
+                        <a href="facebook.com" class="text-gray-500">
+                        <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="twitter.com" class="ml-2 text-gray-500">
+                        <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="instagram.com" class="ml-2 text-gray-500">
+                        <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </span>
+                    </div>
+                </div>
+                </div> -->
+                <!-- card end -->
+
+            </div>
+            <!-- recipe-wrapper end -->
+        </div>
+        <!-- container end -->
+    </section>
+      <!-- recipe section end -->
 
     <!-- script -->
     <script src="./js/main.js"></script>
